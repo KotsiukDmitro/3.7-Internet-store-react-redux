@@ -3,6 +3,7 @@ import Home from './Home';
 import Products from './Products';
 import About from './About';
 import Bag from "./Bag";
+import Checkout from "./Checkout";
 import './App.css';
 import { useState } from "react";
 import { useSelector } from "react-redux";
@@ -21,7 +22,7 @@ function App() {
   return (<div>
     <div className='header'>
       <nav>
-        <Link className={Home ? 'link link-active' : 'link'} to='/'>Home</Link>
+        <Link className='link' to='/'>Home</Link>
         <Link className='link' to='/products'>Products</Link>
         <Link className='link' to='/about'>About</Link>
       </nav>
@@ -36,6 +37,7 @@ function App() {
       <Route path="products" element={<Products />} />
       <Route path="about" element={<About />} />
       <Route path="products/:id" element={<ProductInformation />} />
+      <Route path="checkout" element={<Checkout />} />
     </Routes>
   </div>
   )

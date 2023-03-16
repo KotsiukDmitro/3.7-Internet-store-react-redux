@@ -2,6 +2,7 @@ import React, { useMemo, useEffect } from "react";
 import { listProducts } from "./listProducts";
 import { removeProduct, increment, decrement, removeAllProduct } from "./store/productSlice"
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 function Bag(props) {
 
@@ -66,7 +67,7 @@ function Bag(props) {
             </div>
             <p className="titleBag total">Total: $<span>{sum}</span></p>
             <div className="refAllProducts">
-                <a className="allProducts checkout" href="">checkout</a>
+                <Link className="allProducts checkout" to="checkout" onClick={props.openClose}>checkout</Link>
             </div>
         </div>
     </div >

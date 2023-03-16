@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer base { */
 * {
   margin: 0;
   padding: 0;
@@ -27,9 +32,13 @@
   margin-right: 10px;
 }
 
+/* .link-active {
+    font-size: 16px;
+    color: black;
+  } */
+
 .link-active {
-  font-size: 16px;
-  color: black;
+  @apply text-base text-black
 }
 
 .logo {
@@ -73,8 +82,11 @@
 .title {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-style: italic;
-
 }
+
+/* .title {
+    @apply font-sans italic
+  } */
 
 .btn {
   font-size: 10px;
@@ -341,7 +353,6 @@ input[type=radio] {
   margin-left: 45%;
 }
 
-/*  */
 
 .page-red {
   color: red;
@@ -363,3 +374,89 @@ input[type=radio] {
 .foto-about {
   width: 300px;
 }
+
+.form {
+  margin: 50px auto;
+  width: 500px;
+  min-height: 300px;
+  border: 1px solid;
+  border-radius: 5px;
+  box-shadow: 4px 0px 23px 29px rgba(34, 60, 80, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 20px 30px;
+}
+
+.formLabel {
+  margin-top: 10px;
+  color: rgb(57, 12, 98);
+}
+
+.formInput {
+  width: 200px;
+}
+
+.formBtn {
+  margin-top: 30px;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  color: rgb(30, 219, 30);
+  background-color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid rgb(30, 219, 30);
+  border-radius: 5px;
+}
+
+.titleCategory {
+  font-size: 12px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+
+.td {
+  text-align: center;
+}
+
+.tr {
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+
+.btnValid {
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  font-size: 18px;
+  color: red;
+  border-radius: 5px;
+  border: 1px solid red;
+  background-color: rgb(174, 130, 130);
+  margin-top: 30px;
+}
+
+.textError {
+  font-size: 10px;
+  color: red;
+}
+
+.formInputError {
+  border: red 1px solid;
+}
+
+.name-td {
+  color: green;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+.confirmation {
+  text-align: center;
+  color: rgb(237, 45, 45);
+  font-size: 36px;
+}
+
+/* } */
